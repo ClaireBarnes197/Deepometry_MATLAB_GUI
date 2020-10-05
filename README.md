@@ -36,7 +36,7 @@ Switch to the GUI branch
 
 Once the app has been installed it will be found in the program folder of your machine. This app is run by simply right clicking on the executable.
 
-![Standalone GUI](https://drive.google.com/drive/folders/1x0UGUlN-qXf8A4GXlUBvAUSovJ_ImQAG)
+![Standalone GUI](/images/logo.png)
 
 
 
