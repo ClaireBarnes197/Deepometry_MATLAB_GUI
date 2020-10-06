@@ -112,6 +112,7 @@ _Input location of the model training session:_ choose the folder that contains 
 _Model location:_ location of the saved model. Input either a folder location or an exact .mat fully trained network. If the provided folder location contains more than one model, the latest .mat with appropriate nuber of classifications will be loaded. 
 
 **5. Feature extraction**
+
 Use a trained model to extract deep learning feature embeddings of unclassified objects (eg. as in weakly supervised learning).
 
 Essential user inputs:
