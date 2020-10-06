@@ -42,7 +42,12 @@ Deepometry involves several important steps
 
 1. Parsing data:
 
-Transform single-cell image data from .TIF, .CIF (gated populations exported from IDEAS software) to .mat arrays.
+Transform single-cell image data from .TIF, .CIF (gated populations exported from IDEAS software), placed in a directory structure shown below:
+
+![firstone](https://user-images.githubusercontent.com/72154816/95145594-96f1e200-0773-11eb-93b8-1f4c26254b25.jpg)
+
+To .mat files, stored in subdirectories according to class label:
+
 
 
 
