@@ -66,14 +66,18 @@ _Target classification:_ choose the target categories to train the classifier, e
 
 **2. Model training**
 
-This step allows the user to train MAT:AB's version of ResNet50 according to your specification classification task. 
+This step allows the user to train MATLAB's version of ResNet50 according to their specification classification task. 
 
 Essential user inputs:
 
-Input location: choose the folder that contains parsed numpy arrays (from step 1).
-Output location: location to store the trained model.
-Target classification: choose the target categories to train the classifier, e.g. choose "Samples" to instruct the model to learn to categorize Sample A, Sample B, Sample C; choose "Classes" to train the model to distinguish "Class Control_cells", "Class Treated_cells" etc...
-Learning iteration: the number of epochs for a deep learning training session. By default it is set to 512, which might take several days (depends on the size of the training materials and available hardware, especially GPUs).
+_Input location:_ choose the folder that contains parsed matlab arrays (from step 1).
+
+_Output location:_ location to store the trained model.
+
+_Target classification:_ choose the target categories to train the classifier, e.g. choose "Samples" to instruct the model to learn to categorize Sample A, Sample B, Sample C; choose "Classes" to train the model to distinguish "Class Control_cells", "Class Treated_cells" etc...
+
+_Learning iteration:_ the number of epochs for a deep learning training session. By default it is set to 512, which might take several days (depends on the size of the training materials and available hardware, especially GPUs).
+
 More (hyper)parameters for model training can be set at model.fit.
 
 
