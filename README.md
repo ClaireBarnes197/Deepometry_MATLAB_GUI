@@ -40,7 +40,7 @@ Once the app has been installed it will be found in the program folder of your m
 
 Deepometry involves several important steps
 
-**1. Parsing data:**
+**1. Parsing data**
 
 This stage involves the transformation of single-cell image data from .TIF, .CIF (gated populations exported from IDEAS software) files, placed in a directory structure shown below:
 
