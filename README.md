@@ -40,21 +40,43 @@ Once the app has been installed it will be found in the program folder of your m
 
 Deepometry involves several important steps
 
-1. Parsing data:
+**1. Parsing data:**
 
-Transform single-cell image data from .TIF, .CIF (gated populations exported from IDEAS software), placed in a directory structure shown below:
+This stage involves the transformation of single-cell image data from .TIF, .CIF (gated populations exported from IDEAS software) files, placed in a directory structure shown below:
 
 ![firstone](https://user-images.githubusercontent.com/72154816/95145594-96f1e200-0773-11eb-93b8-1f4c26254b25.jpg)
 
-To .mat files, stored in subdirectories according to class label:
+To .mat files, stored in subdirectories according to class label
 
+![Secondone](https://user-images.githubusercontent.com/72154816/95146592-226c7280-0776-11eb-9463-b6a13c807ae0.jpg)
 
-
+To action this step the user must input the following fields:
 
 Essential user inputs:
 
-Channels: choose the channel(s) imaged by the instrument (e.g. image flow cytometer, fluorescent microscopy). Use square brackets [ ] for multiple channels, e.g. [0,6,3,4]. If a single channel is desired, input an integer without bracket.
-Input location: choose the folder that contains original image inputs. Note: it is highly recommended to structure the input folder into hierarchical sub-folders tagged with Experiment ..., Day ..., Sample ..., Replicate ... , Class ...
+_Channels:_ Choose the channel(s) imaged by the instrument (e.g. image flow cytometer, fluorescent microscopy). Multiple channels are specified as an array, e.g. 0,6,3,4. 
+
+_Input location:_ choose the folder that contains original image inputs. Note: it is highly recommended to structure the input folder into hierarchical sub-folders tagged with Experiment ..., Day ..., Sample ..., Replicate ... , Class ...
+
+_Output location:_ location to store the parsed .mat arrays. 
+
+_Montage size (optional):_ use this option to generate per-channel tiled (stitched) montages, which can be efficiently used for CellProfiler. Leave blank for no stitching.
+
+_Target classification:_ choose the target categories to train the classifier, e.g. choose "Samples" to instruct the model to learn to categorize Sample A, Sample B, Sample C; choose "Classes" to train the model to distinguish "Class Control_cells", "Class Treated_cells" and so on. This will instruct the app to place images in subfolders named according to your classification labels. 
+
+**2. Model training**
+
+This step allows the user to train MAT:AB's version of ResNet50 according to your specification classification task. 
+
+Essential user inputs:
+
+Input location: choose the folder that contains parsed numpy arrays (from step 1).
+Output location: location to store the trained model.
+Target classification: choose the target categories to train the classifier, e.g. choose "Samples" to instruct the model to learn to categorize Sample A, Sample B, Sample C; choose "Classes" to train the model to distinguish "Class Control_cells", "Class Treated_cells" etc...
+Learning iteration: the number of epochs for a deep learning training session. By default it is set to 512, which might take several days (depends on the size of the training materials and available hardware, especially GPUs).
+More (hyper)parameters for model training can be set at model.fit.
+
+
 
 
 
