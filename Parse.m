@@ -1,5 +1,5 @@
-original_imageFolder =  'C:\Users\Paul\Desktop\AABBB'; %Enter the location of your images here
-save_new_imageFolder = 'C:\Users\Paul\Desktop\AABBBlatestggggNEWNEWNEW'; % Enter where to store parsed images here
+original_imageFolder =  string('C:\Deepometry\RBC\raw\blah\Canada_Minh'); %Enter the location of your images here
+save_new_imageFolder = 'C:\Users\Paul\Desktop\AABBBlatestggggNEWNEWNEW22'; % Enter where to store parsed images here
 channels_holder =  '1'; %Enter the channels you would like to include for analysis
 Montage_size = 10; %If you wish to montage images enter size here, otherwise input a value of 0
 pathtobio = 'C:\Users\Paul\Downloads\bfmatlab\bfmatlab'; %If you have .Cif images input path to bioformats here
@@ -399,7 +399,7 @@ for phenotype_loop=1:number_of_directories
 
         %collecting images from all channels and stacking them
         %into one 3D matrix
-
+        padded_image_channel = [];
         for mm=1:Lchan
 
             image_name{mm}=phenotype_directory_info{imageloop(mm)};
