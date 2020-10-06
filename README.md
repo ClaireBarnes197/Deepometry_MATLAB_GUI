@@ -1,7 +1,8 @@
-# Deepometry (MATLAB version)
+# Deepometry (MATLAB and standalone versions)
+
 Deep learning-based image classification and featurization for imaging (flow) cytometry.
 
-This workflow was originally built for imaging flow cytometry data but can be readily adapted for any microscopic images of isolated single objects. The modified implementation of ResNet50 allows researchers to use data made up of any number of color channels.
+This workflow was originally built for imaging flow cytometry data but can be readily adapted for any microscopic images of isolated single objects. The modified implementation of ResNet50 allows researchers to use data made up of any number of colour channels.
 
 # Installation - MATLAB users
 
@@ -12,31 +13,29 @@ The MATLAB version of Deepometry requires the following toolboxes:
     
 Deepometry also makes use of the MATLAB version of [bioformats,](www.openmicroscopy.org/bio-formats/downloads/) a standalone Java library for reading and writing life science image file formats.(Please note that the minimum MATLAB version recommended for this package is R2017b). Lastly, this version completes some basic plots of features learnt from data by applying several dimensional reduction techniques, in particular, UMAP. A MATLAB version can be downloaded from [File Exchange](www.mathworks.com/matlabcentral/fileexchange/71902-uniform-manifold-approximation-and-projection-umap). 
 
-Full installation instructions to install the MATLAB version of Deepometry can be found [here]
+Full installation instructions for the MATLAB version of Deepometry can be found [here]
 
-# Installation - Non- MATLAB users
+# Installation - Non- MATLAB users (Standalone version)
 
-Non-MATLAB users may download and install our standalone GUI. Download the sharable folder and simply right clicking on the file, ‘MyAppinstaller.web.exe’. This will begin installation process which may take a few minutes. 
+Non-MATLAB users may download and install our standalone app. Download the sharable folder and simply right click on the file, ‘MyAppinstaller.web.exe’. This will begin the installation process which may take a few minutes. 
 
 Full installation instructions to install the MATLAB version of Deepometry can be found [here]
 
 # Use
 
-Deepometry may be executed in a of ways:
+Deepometry may be executed in a number of ways:
 
 # MATLAB
 
-Switch to the MATLAB branch.
-
-Once the sharable folder containing the app and all accompanying functions has been downloaded, this may be run by either typing >> GUI_deepometry at the command line or by navigated to the file and hitting the run button at the top of the window. 
+Once the sharable folder containing the app and all accompanying functions has been downloaded, this may be run by either typing >> GUI_deepometry at the command line or by navigating to the file and hitting the run button at the top of the window. 
 
 # Standalone GUI (highly recommended)
-
-Switch to the GUI branch
 
 Once the app has been installed it will be found in the program folder of your machine. This app is run by simply right clicking on the executable.
 
 ![images](https://user-images.githubusercontent.com/72154816/95145308-cc4a0000-0772-11eb-8451-3c2f48ae2106.jpg)
+
+# Deepometry overview
 
 Deepometry involves several important steps
 
@@ -46,13 +45,11 @@ This stage involves the transformation of single-cell image data from .TIF, .CIF
 
 ![firstone](https://user-images.githubusercontent.com/72154816/95145594-96f1e200-0773-11eb-93b8-1f4c26254b25.jpg)
 
-To .mat files, stored in subdirectories according to class label
+to .mat files, stored in subdirectories according to class label
 
 ![Secondone](https://user-images.githubusercontent.com/72154816/95146592-226c7280-0776-11eb-9463-b6a13c807ae0.jpg)
 
 To action this step the user must input the following fields:
-
-Essential user inputs:
 
 _Channels:_ Choose the channel(s) imaged by the instrument (e.g. image flow cytometer, fluorescent microscopy). Multiple channels are specified as an array, e.g. 0,6,3,4. 
 
@@ -68,7 +65,6 @@ _Target classification:_ choose the target categories to train the classifier, e
 
 This step allows the user to train MATLAB's version of ResNet50 according to their specific classification task. 
 
-Essential user inputs:
 
 _Input location:_ choose the folder that contains parsed matlab arrays (from step 1).
 
@@ -85,7 +81,6 @@ More (hyper)parameters for model training can be changed from the .m files, made
 
 Evaluate a trained model using annotated data.
 
-Essential user inputs:
 
 _Input location:_ choose the folder that contains parsed .mat arrays (from step 1).
 
@@ -97,9 +92,9 @@ _Model location:_ location of the saved model. Input either a folder location or
 
 **4. Prediction**
 
-Use a trained model to predict the categories of unknown objects.
+(Please note that as is the case for trained data, all evaluation data should be preprocessed before executing this step)
 
-Essential user inputs:
+This step is used to predict the classificaiotns of unannotated data.
 
 _Input location:_ choose the folder that contains parsed arrays (from step 1).
 
