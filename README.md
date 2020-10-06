@@ -1,1 +1,1 @@
-# Deepometry_MATLAB_GUI
+# Standalone app
