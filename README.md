@@ -36,7 +36,8 @@ Switch to the GUI branch
 
 Once the app has been installed it will be found in the program folder of your machine. This app is run by simply right clicking on the executable.
 
-![Standalone GUI](/images/logo.png)
+![Standalone app](https://github.com/ClaireBarnes197/Deepometry MATLAB GUI/upload/master/1.jpg?raw=true)
+
 
 
 
