@@ -66,7 +66,7 @@ _Target classification:_ choose the target categories to train the classifier, e
 
 **2. Model training**
 
-This step allows the user to train MATLAB's version of ResNet50 according to their specification classification task. 
+This step allows the user to train MATLAB's version of ResNet50 according to their specific classification task. 
 
 Essential user inputs:
 
@@ -74,27 +74,53 @@ _Input location:_ choose the folder that contains parsed matlab arrays (from ste
 
 _Output location:_ location to store the trained model.
 
-_Target classification:_ choose the target categories to train the classifier, e.g. choose "Samples" to instruct the model to learn to categorize Sample A, Sample B, Sample C; choose "Classes" to train the model to distinguish "Class Control_cells", "Class Treated_cells" etc...
+_Channels:_ User should specify all channels they wish to use for training, i.e.,1,9,12
 
 _Learning iteration:_ the number of epochs for a deep learning training session. By default it is set to 512, which might take several days (depends on the size of the training materials and available hardware, especially GPUs).
 
-More (hyper)parameters for model training can be set at model.fit.
+More (hyper)parameters for model training can be changed from the .m files, made available here
 
+**3. Evaluation**
+(Please note that as is the case for trained data, all evaluation data should be preprocessed before executing this step)
 
+Evaluate a trained model using annotated data.
 
+Essential user inputs:
 
+_Input location:_ choose the folder that contains parsed .mat arrays (from step 1).
 
+_Output location:_ location to store the evaluation outcomes.
 
+_Input location for the model training session:_ choose the folder that contains parsed arrays used for training the model (green column). This is crucial to ensure the correct reconstruction of categorization, since the training materials should contain all the categories the model has been exposed to. E.g. there could be a situation that one or some categories are missing in a testing dataset.
 
+_Model location:_ location of the saved model. Input either a folder location or an exact .mat fully trained network. If the provided folder location contains more than one model, the latest .mat with appropriate nuber of classifications will be loaded. 
 
+**4. Prediction**
 
+Use a trained model to predict the categories of unknown objects.
 
+Essential user inputs:
 
+_Input location:_ choose the folder that contains parsed arrays (from step 1).
 
+_Output location:_ location to store the prediction outcomes.
 
+_Target classification:_ choose the target categories to predict.
 
+_Input location of the model training session:_ choose the folder that contains parsed numpy arrays (from step 1). This is crucial to ensure the correct reconstruction of categorization, since the training materials should contain all the categories the model has been taught to classify, e.g. there could be a situation that one or some categories are missing in a testing dataset.
 
+_Model location:_ location of the saved model. Input either a folder location or an exact .mat fully trained network. If the provided folder location contains more than one model, the latest .mat with appropriate nuber of classifications will be loaded. 
 
+**5. Feature extraction**
+Use a trained model to extract deep learning feature embeddings of unclassified objects (eg. as in weakly supervised learning).
+
+Essential user inputs:
+
+_Input location:_ choose the folder that contains parsed arrays (from step 1).
+
+_Output location:_ location to store the extracted features and associated metadata, along with several basic plots.
+
+_Model location (required):_ location of the saved model. Input either a folder location or an exact .mat fully trained network. If the provided folder location contains more than one model, the latest .mat with appropriate nuber of classifications will be loaded. 
 
 
 
