@@ -1,4 +1,4 @@
-image_directory =  'C:\Documents\Rawimages'; % Specify location of parsed images
+image_directory =  'C:\Documents\Predictionimages'; % Specify location of parsed images
 output_directory = 'C:\Documents\Predictionplots'; % Specify output location
 
 model_directory =string('C:\Documents\Trainedmodel'); % Specify location of model to use for prediction
