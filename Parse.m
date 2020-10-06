@@ -1,8 +1,8 @@
-original_imageFolder =  string('C:\Deepometry\RBC\raw\blah\Canada_Minh'); %Enter the location of your images here
-save_new_imageFolder = 'C:\Users\Paul\Desktop\AABBBlatestggggNEWNEWNEW22'; % Enter where to store parsed images here
+original_imageFolder =  'C:\Documents\Imagesraw'; %Enter the location of your images here
+save_new_imageFolder = 'C:\Documents\Imagesparsed'; % Enter where to store parsed images here
 channels_holder =  '1'; %Enter the channels you would like to include for analysis
 Montage_size = 10; %If you wish to montage images enter size here, otherwise input a value of 0
-pathtobio = 'C:\Users\Paul\Downloads\bfmatlab\bfmatlab'; %If you have .Cif images input path to bioformats here
+pathtobio = 'C:\Downloads\bfmatlab\bfmatlab'; %If you have .Cif images input path to bioformats here
 %Create a unique list of labels for images
 %Choose level of directorty structure to use for classification
 %1 = Experiment
