@@ -38,6 +38,16 @@ Once the app has been installed it will be found in the program folder of your m
 
 ![Standalone app](https://github.com/ClaireBarnes197/Deepometry_MATLAB_GUI/images.jpg)
 
+1. Parsing data:
+Transform single-cell image data from .TIF, .CIF (gated populations exported from IDEAS software) to Numpy arrays (.NPY).
+
+Essential user inputs:
+
+Frame size: set the width/height size of the (width × height × channel) tensor. If user sets a size bigger than the original images, each of the images will be padded with its own background. If user sets a size smaller than the original images, each of the images will be cropped toward its center.
+Channels: choose the channel(s) imaged by the instrument (e.g. image flow cytometer, fluorescent microscopy). Use square brackets [ ] for multiple channels, e.g. [0,6,3,4]. If a single channel is desired, input an integer without bracket.
+Input location: choose the folder that contains original image inputs. Note: it is highly recommended to structure the input folder into hierarchical sub-folders tagged with Experiment ..., Day ..., Sample ..., Replicate ... , Class ...
+
+
 
 
 
