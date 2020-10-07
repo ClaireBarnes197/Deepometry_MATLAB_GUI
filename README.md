@@ -33,7 +33,8 @@ Once the sharable folder containing the app and all accompanying functions has b
 
 Once the app has been installed it will be found in the program folder of your machine. This app is run by simply right clicking on the executable.
 
-![images](https://user-images.githubusercontent.com/72154816/95145308-cc4a0000-0772-11eb-8451-3c2f48ae2106.jpg)
+
+![new (1)](https://user-images.githubusercontent.com/72154816/95334702-5c3c9680-08a6-11eb-9d37-8374bd3bcfe0.jpg)
 
 # Deepometry overview
 
