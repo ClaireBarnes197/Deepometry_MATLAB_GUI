@@ -1,4 +1,4 @@
-# Deepometry (MATLAB and standalone versions)
+# Deepometry (MATLAB and Standalone versions)
 
 Deep learning-based image classification and featurization for imaging (flow) cytometry.
 
